@@ -517,6 +517,8 @@ resumed and copied to another computer.
 amounts and food-group factors. Allergens and diets are detected from ingredient names: verify them
 before relying on them.
 
+**Data notice.** The MIT licence covers the code only. data/hummus/catalogue.json.gz is derived from the HUMMUS dataset (Bölz et al., RecSys 2023), collected from food.com, and may be used for educational or scientific purposes only. If you use it, cite HUMMUS.
+
 ---
 
 ## Limitations
