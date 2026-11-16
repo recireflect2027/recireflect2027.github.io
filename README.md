@@ -1,9 +1,10 @@
 # ReciReflect: transparent, agentic food recommendation
 
 [![Website](https://img.shields.io/badge/Website-Visit-0A84FF?style=for-the-badge)](https://amirmohammad-nouri.github.io/ReciReflect-site/)
-[![Live Demo](https://img.shields.io/badge/Live-Demo-2EA44F?style=for-the-badge)](https://fip-195-148-23-242.kaj.poutavm.fi/)
-[![Video](https://img.shields.io/badge/Video-Watch-red?style=for-the-badge)](https://amirmohammad-nouri.github.io/ReciReflect-site/#video)
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-2EA44F?style=for-the-badge)](https://fip-195-148-23-242.kaj.poutavm.fi/)
+
+[![Video](https://img.shields.io/badge/Video-Watch-red?style=for-the-badge)](https://amirmohammad-nouri.github.io/ReciReflect-site/#video)
 ReciReflect recommends recipes from the **HUMMUS** dataset (about 9,600 food.com recipes), ranked by
 values each user controls (by default **healthiness, sustainability and convenience**) plus a learned
 share for taste. A **supervisor agent** watches the learning process: when what a user *says* they want
