@@ -6,11 +6,16 @@
 
 [![Video](https://img.shields.io/badge/Video-Watch-red?style=for-the-badge)](https://amirmohammad-nouri.github.io/ReciReflect-site/#video)
 
-ReciReflect recommends recipes from the **HUMMUS** dataset (about 9,600 food.com recipes), ranked by
-values each user controls (by default **healthiness, sustainability and convenience**) plus a learned
-share for taste. A **supervisor agent** watches the learning process: when what a user *says* they want
-and what they *do* drift apart, it looks up their history in a **knowledge graph** and asks a question or
-proposes a change, always with the evidence. Nothing about a user's goal changes until they accept.
+ReciReflect is built on one rule: the recommender may learn from what a user does, but it may not change
+the user's goal without asking. It draws on 9,605 food.com recipes from a cleaned extract of the
+**HUMMUS** dataset, removes recipes that conflict with declared **allergies and diets**, and ranks the
+rest by the values each user sets (by default **healthiness, sustainability and convenience**) plus a
+fixed 25% share for learned taste. Learned taste, the priorities a user's choices reveal, and the saved
+goal are kept separate; only the saved goal and taste affect the ranking. A **rule-based supervisor**
+compares what a user *chose* with what they *do*: when the two drift apart beyond set thresholds, it
+searches their history in a **knowledge graph** and asks a trade-off question or proposes a new goal.
+Every proposal shows its evidence and previews the recipes it would change. It takes effect only if the
+user accepts, and any earlier goal can be restored.
 
 ReciReflect is built for **research on transparent recommendation**: every score can be opened, every step
 of the agent is shown live, and a study administrator decides who sees what, creates participant
@@ -517,8 +522,8 @@ before relying on them.
 ## Limitations
 
 * Footprints are estimates from food-group averages, not a life-cycle assessment. Allergens and diets are
-  detected from ingredient names and can be wrong.
-* Healthiness is an operational nutrient measure for ranking, not medical or dietetic advice.
+  detected from ingredient and can be wrong.
+* Healthiness is an operational nutrient measure for ranking, not medical advice.
 * Taste match and revealed weights are model estimates; learning rates and policy thresholds are design
   choices that still need calibration with users.
 * The model's wording is checked for numbers, recipe names and medical claims, not for every possible
